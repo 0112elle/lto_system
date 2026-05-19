@@ -1,0 +1,432 @@
+# ====================================================================================================================
+# This should be shown when "python3 main.py" is run in Ubuntu:
+
+WELCOME TO THE LTO SYSTEM!
+
+OPTIONS:
+[1] Driver Management
+[2] Vehicle Management
+[3] Vehicle Registration Management
+[4] Traffic Violation Management
+[5] Generate Reports
+[0] Exit
+
+Please enter an option (0-5):
+
+# ====================================================================================================================
+# When "[1]" is selected, this options should show:
+
+DRIVER MANAGEMENT
+
+OPTIONS:
+[1] Add a Driver Record
+[2] Update a Driver Record
+[3] Delete a Driver Record
+[4] Search Driver records
+[0] Return
+
+Please enter an option (0-4): <user should input>
+
+# When "[1]>>[0]" is selected, the console app should return to the previous prompt (main menu/options).
+
+# When "[1]>>[1]" is selected, the console app should ask for ALL necessary driver information (including license information, since a driver MUST have a license). The inputs should be validated and the stored procedures in the SQL_Statements.sql file should be utilized.
+
+DRIVER MANAGEMENT: ADD DRIVER RECORD
+
+...
+
+# When "[1]>>[2]" is selected, the console app should ask for the driver ID of the driver to be updated (verify if this ID exists). If ID exists, show the driver record before confirming if this is the driver record to be updated. Then the console should ask for all fields (including license information) for updating. The inputs should be validated and the stored procedures in the SQL_Statements.sql file should be utilized.
+
+DRIVER MANAGEMENT: UPDATE DRIVER RECORD
+
+Enter Driver ID: <user should input>
+
+...
+
+Is this the driver record to be updated? (Y/n): <user should input, if "n" return to "[1]">
+
+...
+
+# When "[1]>>[3]" is selected, the console app should ask for the driver ID of the driver to be deleted (verify if this ID exists). Show the driver record before confirming deletion if ID exists. Stored procedures in the SQL_Statements.sql file should be utilized.
+
+DRIVER MANAGEMENT: DELETE DRIVER RECORD
+
+Enter Driver ID: <user should input>
+
+...
+
+Is this the driver record to be deleted? (Y/n): <user should input, if "n" return to "[1]">
+
+...
+
+# When "[1]>>[4]" is selected, the console app should ask for the driver ID of the driver OR full name of the driver. Show the driver record if it exists before confirming if this is the driver to be searched for. Then, the console should show this prompt:
+
+DRIVER MANAGEMENT: SEARCH DRIVER RECORDS
+
+Enter Driver ID: <user should input>
+
+...
+
+Is this the driver record to be search? (Y/n): <user should input, if "n" return to "[1]">
+
+...
+
+OPTIONS:
+[1] Show Owned Vehicles
+[2] Show License Information
+[3] Show Traffic Violations
+[0] Return
+
+Please enter an option (0-3): <user should input>
+
+# When "[1]>>[4]>>[0]" is selected, the console app should return to the previous prompt or "[1]>>[4]"
+
+# When "[1]>>[4]>>[1]" is selected, the console app should show all information (including the Registration_number) of the vehicles owned by the driver.
+
+DRIVER MANAGEMENT: SEARCH DRIVER RECORDS (OWNED VEHICLES)
+
+...
+
+# When "[1]>>[4]>>[2]" is selected, the console app should show all license information (including all DL codes and all condition) of the driver. 
+
+DRIVER MANAGEMENT: SEARCH DRIVER RECORDS (LICENSE INFORMATION)
+
+...
+
+# When "[1]>>[4]>>[3]" is selected, the console app should show all information (including vehicle ID, violation type, officer ID, and location city and region) regarding the traffic violations associated with the driver.
+
+DRIVER MANAGEMENT: SEARCH DRIVER RECORDS (TRAFFIC VIOLATIONS)
+
+...
+
+
+# ====================================================================================================================
+# When "[2]" is selected, this options should show:
+
+VEHICLE MANAGEMENT
+
+OPTIONS:
+[1] Add Vehicle Record
+[2] Update Vehicle Record
+[3] Delete Vehicle Record
+[4] Search Vehicle records
+[0] Return
+
+Please enter an option (0-4): <user should input>
+
+# When "[2]>>[0]" is selected, the console app should return to the previous prompt (main menu/options).
+
+# When "[2]>>[1]" is selected, the console app should ask ALL necessary vehicle information (including driver ID). This driver ID should be existing. If it does not exist, prompt the user that vehicles need to be owned by registered drivers.
+
+VEHICLE MANAGEMENT: ADD VEHICLE RECORD
+
+...
+
+# When "[2]>>[2]" is selected, the console app should ask for the vehicle ID of the vehicle record to be updated (validate if this ID exists). If input ID exists, show the vehicle record before confirming if this is the vehicle record to be updated. Then ask for all required fields. Be cautious in the constraints (engine number, plate number, chassis number should each be unique and driver id should be existent).
+
+VEHICLE MANAGEMENT: UPDATE VEHICLE RECORD
+
+Enter Vehicle ID: <user should input>
+
+...
+
+Is this the vehicle record to be updated? (Y/n): <user should input, if "n" return to "[2]">
+
+...
+
+# When "[2]>>[3]" is selected, the console app should ask for the vehicle ID of the vehicle record to be deleted (validate if this ID exists). If input ID exists, show the vehicle record before confirming if this is the vehicle record to be deleted. Be cautious to the constraints, do not allow deletion if vehicle record is referenced by a vehicle registration or a traffic violation.
+
+VEHICLE MANAGEMENT: DELETE VEHICLE RECORD
+
+Enter Vehicle ID: <user should input>
+
+...
+
+Is this the vehicle record to be deleted? (Y/n): <user should input, if "n" return to "[2]">
+
+...
+
+# When "[2]>>[4]" is selected, the console app should ask for the vehicle ID of the vehicle record to be searched for (validate if this ID exists). It the ID exists, show the options for this.
+
+VEHICLE MANAGEMENT: SEARCH VEHICLE RECORD
+
+Enter Vehicle ID: <user should input>
+
+...
+
+Is this the vehicle record to be searched? (Y/n): <user should input, if "n" return to "[2]">
+
+OPTIONS:
+[1] Show Vehicle Owner
+[2] Show Vehicle Registrations
+[3] Show Associated Traffic Violations
+[0] Return
+
+Please enter an option (0-3): <user should input>
+
+...
+
+# When "[2]>>[4]>>[0]" is selected, the console app should return to the previous prompt or "[2]>>[4]"
+
+# When "[2]>>[4]>>[1]" is selected, the console app should show the complete information of the owner of the vehicle. 
+
+VEHICLE MANAGEMENT: SEARCH VEHICLE RECORD (VEHICLE OWNER)
+
+...
+
+# When "[2]>>[4]>>[2]" is selected, the console app should show all the vehicle registrations of the vehicle. Since a vehicle could have a history of vehicle registrations, sort the vehicle registrations from latest to oldest.
+
+VEHICLE MANAGEMENT: SEARCH VEHICLE RECORD (VEHICLE REGISTRATIONS)
+
+...
+
+# When "[2]>>[4]>>[3]" is selected, the console app should show the complete information for ALL the traffic violations associated with the vehicle.
+
+VEHICLE MANAGEMENT: SEARCH VEHICLE RECORD (ASSOCIATED TRAFFIC VIOLATIONS)
+
+...
+
+# ====================================================================================================================
+# When "[3]" is selected, the console app should show:
+
+VEHICLE REGISTRATION MANAGEMENT
+
+OPTIONS:
+[1] Add a Vehicle Registration Record 
+[2] Renew a Vehicle Registration
+[3] Update a Vehicle Registration Record
+[4] Delete a Vehicle Registration Record
+[0] Return
+
+Please enter an option (0-4): <user should input>
+
+# When "[3]>>[0]" is selected, the console app should return to the previous prompt (main menu/options).
+
+# When "[3]>>[1]" is selected, the console app should ask for the vehicle ID to which the NEW vehicle registration is for. This ID should exist. Do not allow creation of a new vehicle registration if the selected vehicle ID currently has an active vehicle registration that is not yet expired. Only then could should the app ask for ALL the necessary vehicle registration information.
+
+VEHICLE REGISTRATION MANAGEMENT: ADD VEHICLE REGISTRATION RECORD
+
+...
+
+# When "[3]>>[2]" is selected, the console app should ask for the registration number of the vehicle to which the renewal is for. If the registration number exists, show the complete information of the vehicle registration record before confirming to create a new vehicle registration copying the ALL fields of the previous vehicle registration but some fields (registration number, registration date, expiration date, and registration status) must be new. 
+
+VEHICLE REGISTRATION MANAGEMENT: RENEW VEHICLE REGISTRATION
+
+Enter Vehicle Registration Number: <user should input>
+
+...
+
+Is this the vehicle registration record to be renewed? (Y/n): <user should input, if "n" return to "[3]">
+
+...
+
+# When "[3]>>[3]" is selected, the console app should ask for the registration number of the vehicle to which the update is for. If the registration number exists, show the complete information of the vehicle registration before confirming if this is the record to be updated. Then ask for all the updates.
+
+VEHICLE REGISTRATION MANAGEMENT: UPDATE VEHICLE REGISTRATION RECORD
+
+Enter Vehicle Registration Number: <user should input>
+
+...
+
+Is this the vehicle registration record to be updated? (Y/n): <user should input, if "n" return to "[3]">
+
+...
+
+# When "[3]>>[4]" is selected, the console app should ask for the vehicle registration number. If the vehicle registration number exists, the console app should show the complete information of the vehicle registration record before confirming deletion.
+
+VEHICLE REGISTRATION MANAGEMENT: DELETE VEHICLE REGISTRATION RECORD
+
+Enter Vehicle Registration Number: <user should input>
+
+...
+
+Is this the vehicle registration record to be deleted? (Y/n): <user should input, if "n" return to "[3]">
+
+...
+
+# ====================================================================================================================
+# When "[4]" is selected, the console app should show:
+
+TRAFFIC VIOLATION MANAGEMENT
+
+OPTIONS:
+[1] Add a Traffic Violation Record
+[2] Update a Traffic Violation Record
+[3] Delete a Traffic Violation Record
+[0] Return
+
+Please enter an option (0-3): <user should input>
+
+# When "[4]>>[0]" is selected, the console app should return to the previous prompt (main menu/options).
+
+# When "[4]>>[1]" is selected, the console app should ask for the Drive ID of the driver which the traffic violation is for. If the driver ID exists, show the complete information of the driver before confirming to add the traffic violation. When confirmed, ask for all the required fields of the traffic violation (including all foreign keys).
+
+TRAFFIC VIOLATION MANAGEMENT: ADD A TRAFFIC VIOLATION RECORD
+
+Enter Driver ID: <user should input>
+
+...
+
+Is this the driver for the traffic violation to be added? (Y/n): <user should input, if "n" return to "[4]">
+
+...
+
+# When "[4]>>[2]" is selected, the console app should ask for the traffic violation id. if the violation id exists, show the complete information of the traffic violation before confirming update. Then ask for all necessary fields for the update.
+
+TRAFFIC VIOLATION MANAGEMENT: UPDATE A TRAFFIC VIOLATION RECORD
+
+Enter Traffic Violation ID: <user should input>
+
+...
+
+Is this the traffic violation record to be updated? (Y/n): <user should input, if "n" return to "[4]">
+
+...
+
+# When "[4]>>[3]" is selected, the console app should ask for the traffic violation id. if the violation id exists, show the complete information of the traffic violation before confirming deletion.
+
+TRAFFIC VIOLATION MANAGEMENT: DELETE A TRAFFIC VIOLATION RECORD
+
+Enter Traffic Violation ID: <user should input>
+
+...
+
+Is this the traffic violation record to be deleted? (Y/n): <user should input, if "n" return to "[4]">
+
+...
+
+# ====================================================================================================================
+# When "[5]" is selected, the console app should show:
+
+GENERATE REPORTS
+
+OPTIONS:
+[1] View All Registered Drivers
+[2] View All Vehicles Owned by a Given Driver
+[3] View All Vehicles with Expired Registrations as of a Given Date
+[4] View All Drivers with Expired or Suspended Licenses
+[5] View All Traffic Violations Committed by a Given Driver Within Specific Dates
+[6] View Total Number of Violations per Violation Type for a Given Year
+[7] View All Vehicle Involved in violations Within a Given City or Region
+[0] Return
+
+# When "[5]>>[0]" is selected, the console app should return to the previous prompt (main menu/options).
+
+# When "[5]>>[1]" is selected, the console app should show:
+
+GENERATE REPORTS: VIEW REGISTERED DRIVERS
+
+SELECT FILTER:
+[1] License Type
+[2] License Status
+[3] Age Range
+[4] Sex Assigned at Birth
+
+Select which filter to be used: <user should input>
+
+# When "[5]>>[1]>>[1]" is selected, the console app should show all license types as category options and then show all drivers within that selected category.
+
+GENERATE REPORTS: VIEW REGISTERED DRIVERS
+
+SELECT LICENSE TYPE FILTER:
+[1] Student Permit
+[2] Professional
+[3] Non-Professional
+[0] Return
+
+Enter License Type Filter (0-3): <user should input, "0" should return to "[5]>>[1]">
+
+...
+
+# When "[5]>>[1]>>[2]" is selected, the console app should show all license status as category options and then show all drivers within that selected category.
+
+GENERATE REPORTS: VIEW REGISTERED DRIVERS
+
+SELECT LICENSE STATUS FILTER:
+[1] Valid
+[2] Expired
+[3] Suspended
+[4] Revoked
+[0] Return
+
+Enter License Status Filter (0-4): <user should input, "0" should return to "[5]>>[1]">
+
+...
+
+# When "[5]>>[1]>>[3]" is selected, the console app should ask for minimum age (no negative) and maximum age (must be greatar than or equal to minimum) as the given age range and then show all drivers within that age range.
+
+GENERATE REPORTS: VIEW REGISTERED DRIVERS
+
+Enter Minimum Age Bracket: <user must input a non-negative integer>
+
+Enter Maximum Age Bracket: <user must input non-negative integer greater tha or equal to the previous input>
+
+...
+
+# When "[5]>>[1]>>[4]" is selected, the console app should show all sex assigned at birth as category options and then show all drivers within that selected category.
+
+GENERATE REPORTS: VIEW REGISTERED DRIVERS
+
+SELECT SEX ASSIGNED AT BIRTH AS FILTER:
+[1] Male
+[2] Female
+[0] Return
+
+Enter Sex Assigned at Birth as Filter (0-2): <user should input, "0" should return to "[5]>>[1]">
+
+...
+
+# When "[5]>>[2]" is selected, the console app should (do the same thing the "[1]>>[4]>>[1]" does) ask for the Driver ID. If driver ID exists, show the complete information of the driver before comfirming to show all vehicles owned. If confirmed, show complete information for ALL vehicles owned by that driver.
+
+GENERATE REPORTS: VIEW VEHICLES OWNED BY A DRIVER
+
+Enter Driver ID: <user should input>
+
+...
+
+Confirm Showing All Owned Vehicles by this Driver? (Y/n): <user should input, if "n" return to "[5]">
+
+...
+
+# When "[5]>>[3]" is selected, the console app should ask for a specific date in "YYYY-MM-DD", validate this input. If correct use this for the fetching. Then show all expired vehicle registrations as of that input date.
+
+GENERATE REPORTS: VIEW EXPIRED REGISTRATIONS AS OF A DATE
+
+Enter Given Date ("YYYY-MM-DD"): <user should input>
+
+...
+
+# When "[5]>>[4]" is selected, the console app should show the complete information of all drivers with an expired (using license status) or suspended license.
+
+GENERATE REPORTS: DRIVERS WITH EXPIRED OR SUSPENDED LICENSES
+
+...
+
+# When "[5]>>[5]" is selected, the console app should ask for ask for the Driver ID. If driver ID exists, show the complete information of the driver before comfirming to show all traffic violation. If confirmed, show complete information for ALL traffictions committed by the driver.
+
+GENERATE REPORTS: VIEW TRAFFIC VIOLATION COMMITTED BY A DRIVER
+
+Enter Driver ID: <user should input>
+
+...
+
+Confirm Showing All Traffic Violations by this Driver? (Y/n): <user should input, if "n" return to "[5]">
+
+...
+
+# When "[5]>>[6]" is selected, the console app should ask for a year (must not be greater than the current year). Then show the total number of violations per violation type for that given year. This could be done by counting and aggregating (but check if there is already a stored procedure for this).
+
+GENERATE REPORTS: TOTAL NUMBER OF VIOLATIONS PER VIOlATION TYPE
+
+Enter Given Year: <user should input "YYYY">
+
+...
+
+# When "[5]>>[7]" is selected, the console app should ask for the city or region. This should not be case sensitive and should work with "LIKE" so that the search will show even if the characters are not exact. Then show the complete information of all vehicles involved in violations within that given city/region.
+
+GENERATE REPORTS: VEHICLES INVOLVED IN VIOLATIONS WITHIN A CITY/REGION
+
+Enter City (Leave Blank to Skip): <user should input. if skipped, next input ir required>
+Enter Region (Leave Blank to Skip): <user should input. if skipped and previoud input was blank, prompt the user that one of these must have an input then return to "[5]">
+
+...

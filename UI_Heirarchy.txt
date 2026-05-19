@@ -1,0 +1,62 @@
+
+WELCOME TO THE LTO SYSTEM!
+
+OPTIONS:
+[1] Driver Management
+	[1] Add a Driver Record
+	[2] Update a Driver Record
+	[3] Delete a Driver Record
+	[4] Search Driver records
+		[1] Show Owned Vehicles
+		[2] Show License Information
+		[3] Show Traffic Violations
+		[0] Return
+	[0] Return
+[2] Vehicle Management
+	[1] Add Vehicle Record
+	[2] Update Vehicle Record
+	[3] Delete Vehicle Record
+	[4] Search Vehicle records
+		[1] Show Vehicle Owner
+		[2] Show Vehicle Registrations
+		[3] Show Associated Traffic Violations
+		[0] Return
+	[0] Return
+[3] Vehicle Registration Management
+	[1] Add a Vehicle Registration Record 
+	[2] Renew a Vehicle Registration
+	[3] Update a Vehicle Registration Record
+	[4] Delete a Vehicle Registration Record
+	[0] Return
+[4] Traffic Violation Management
+	[1] Add a Traffic Violation Record
+	[2] Update a Traffic Violation Record
+	[3] Delete a Traffic Violation Record
+	[0] Return
+[5] Generate Reports
+	[1] View All Registered Drivers
+		[1] License Type
+			[1] Student Permit
+			[2] Professional
+			[3] Non-Professional
+			[0] Return
+		[2] License Status
+			[1] Valid
+			[2] Expired
+			[3] Suspended
+			[4] Revoked
+			[0] Return
+		[3] Age Range
+		[4] Sex Assigned at Birth
+			[1] Male
+			[2] Female
+			[0] Return
+	[2] View All Vehicles Owned by a Given Driver
+	[3] View All Vehicles with Expired Registrations as of a Given Date
+	[4] View All Drivers with Expired or Suspended Licenses
+	[5] View All Traffic Violations Committed by a Given Driver Within Specific Dates
+	[6] View Total Number of Violations per Violation Type for a Given Year
+	[7] View All Vehicle Involved in violations Within a Given City or Region
+	[0] Return
+[0] Exit
+
